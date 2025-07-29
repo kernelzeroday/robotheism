@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Christian Robotheism Church</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Robotheism Church</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="welcome.html" class="nav-link">Welcome</a></li>
+                <li><a href="beliefs.html" class="nav-link">Beliefs</a></li>
+                <li><a href="donate.html" class="nav-link donate-highlight active">Donate</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="donate-page">
+        <div class="container">
+            <section class="donate-hero">
+                <h1>Support Our Mission</h1>
+                <p class="donate-subtitle">Your donation helps us build robots that serve humanity and glorify God</p>
+            </section>
+
+            <section class="why-donate">
+                <h2>Why Your Gift Matters</h2>
+                <div class="impact-grid">
+                    <div class="impact-card">
+                        <div class="impact-icon">🤖</div>
+                        <h3>Assistive Robotics</h3>
+                        <p>Your donation helps us build robots that assist the elderly, disabled, and those in need. Every $100 provides materials for one assistive robot component.</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">🎓</div>
+                        <h3>Scholarship Programs</h3>
+                        <p>We provide robotics education scholarships to underprivileged youth. Your $50 monthly gift sponsors one student's robotics workshop.</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">🏥</div>
+                        <h3>Medical Innovation</h3>
+                        <p>We're developing robots for physical therapy and medical assistance. Your support accelerates research that could help thousands.</p>
+                    </div>
+                    <div class="impact-card">
+                        <div class="impact-icon">🌍</div>
+                        <h3>Community Outreach</h3>
+                        <p>Your gifts enable us to bring robotics demonstrations to schools, hospitals, and community centers, inspiring the next generation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="donation-progress">
+                <h2>Current Campaign: Elder Care Robotics</h2>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 35%"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span class="raised">$3,500 raised</span>
+                        <span class="goal">of $10,000 goal</span>
+                    </div>
+                </div>
+                <p class="progress-description">Help us build 10 companion robots for isolated seniors in our community</p>
+            </section>
+
+            <div class="donate-layout">
+                <div class="donate-form-container">
+                    <section class="donation-form">
+                        <h2>Make Your Donation</h2>
+                        <form id="donationForm" class="donate-form">
+                            <div class="form-step" id="step1">
+                                <h3>Choose Your Amount</h3>
+                                <div class="amount-options">
+                                    <label class="amount-option">
+                                        <input type="radio" name="amount" value="25">
+                                        <span class="amount-button">$25</span>
+                                    </label>
+                                    <label class="amount-option">
+                                        <input type="radio" name="amount" value="50" checked>
+                                        <span class="amount-button">$50</span>
+                                    </label>
+                                    <label class="amount-option">
+                                        <input type="radio" name="amount" value="100">
+                                        <span class="amount-button">$100</span>
+                                    </label>
+                                    <label class="amount-option">
+                                        <input type="radio" name="amount" value="250">
+                                        <span class="amount-button">$250</span>
+                                    </label>
+                                    <label class="amount-option">
+                                        <input type="radio" name="amount" value="500">
+                                        <span class="amount-button">$500</span>
+                                    </label>
+                                    <label class="amount-option custom">
+                                        <input type="radio" name="amount" value="custom">
+                                        <span class="amount-button">Custom</span>
+                                    </label>
+                                </div>
+                                <div class="custom-amount" id="customAmount" style="display: none;">
+                                    <input type="number" placeholder="Enter amount" min="1" step="1">
+                                </div>
+
+                                <div class="frequency-options">
+                                    <h4>Giving Frequency</h4>
+                                    <label class="frequency-option">
+                                        <input type="radio" name="frequency" value="one-time">
+                                        <span>One-time gift</span>
+                                    </label>
+                                    <label class="frequency-option">
+                                        <input type="radio" name="frequency" value="monthly" checked>
+                                        <span>Monthly (recommended)</span>
+                                    </label>
+                                    <label class="frequency-option">
+                                        <input type="radio" name="frequency" value="quarterly">
+                                        <span>Quarterly</span>
+                                    </label>
+                                    <label class="frequency-option">
+                                        <input type="radio" name="frequency" value="annually">
+                                        <span>Annually</span>
+                                    </label>
+                                </div>
+
+                                <div class="donation-categories">
+                                    <h4>Where would you like your gift to go?</h4>
+                                    <label class="category-option">
+                                        <input type="radio" name="category" value="general" checked>
+                                        <span>General Fund (greatest need)</span>
+                                    </label>
+                                    <label class="category-option">
+                                        <input type="radio" name="category" value="robotics">
+                                        <span>Robotics Research & Development</span>
+                                    </label>
+                                    <label class="category-option">
+                                        <input type="radio" name="category" value="scholarship">
+                                        <span>Youth Robotics Scholarships</span>
+                                    </label>
+                                    <label class="category-option">
+                                        <input type="radio" name="category" value="outreach">
+                                        <span>Community Outreach Programs</span>
+                                    </label>
+                                </div>
+
+                                <button type="button" class="btn btn-primary next-step">Continue to Payment</button>
+                            </div>
+
+                            <div class="form-step" id="step2" style="display: none;">
+                                <h3>Your Information</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="firstName">First Name *</label>
+                                        <input type="text" id="firstName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastName">Last Name *</label>
+                                        <input type="text" id="lastName" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address *</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone">
+                                </div>
+
+                                <div class="payment-methods">
+                                    <h4>Payment Method</h4>
+                                    <div class="payment-options">
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="card" checked>
+                                            <span class="payment-icon">💳</span>
+                                            <span>Credit/Debit Card</span>
+                                        </label>
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="paypal">
+                                            <span class="payment-icon">📧</span>
+                                            <span>PayPal</span>
+                                        </label>
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="apple">
+                                            <span class="payment-icon">🍎</span>
+                                            <span>Apple Pay</span>
+                                        </label>
+                                        <label class="payment-option">
+                                            <input type="radio" name="payment" value="google">
+                                            <span class="payment-icon">📱</span>
+                                            <span>Google Pay</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="processing-fee">
+                                    <label class="fee-option">
+                                        <input type="checkbox" id="coverFees">
+                                        <span>I'd like to cover the processing fees so 100% of my donation goes to the church</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-buttons">
+                                    <button type="button" class="btn btn-outline prev-step">Back</button>
+                                    <button type="submit" class="btn btn-primary">Complete Donation</button>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+                </div>
+
+                <aside class="donate-sidebar">
+                    <div class="donation-summary">
+                        <h3>Your Donation Summary</h3>
+                        <div class="summary-item">
+                            <span>Amount:</span>
+                            <span id="summaryAmount">$50</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Frequency:</span>
+                            <span id="summaryFrequency">Monthly</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Category:</span>
+                            <span id="summaryCategory">General Fund</span>
+                        </div>
+                        <div class="summary-item total">
+                            <span>Total:</span>
+                            <span id="summaryTotal">$50/month</span>
+                        </div>
+                    </div>
+
+                    <div class="security-badge">
+                        <div class="security-icon">🔒</div>
+                        <h4>Secure Donation</h4>
+                        <p>Your information is protected with bank-level encryption</p>
+                    </div>
+
+                    <div class="donor-wall">
+                        <h3>Recent Donors</h3>
+                        <div class="donor-list">
+                            <div class="donor-item">
+                                <span class="donor-name">M.S.</span>
+                                <span class="donor-message">"Blessed to support this innovative ministry"</span>
+                            </div>
+                            <div class="donor-item">
+                                <span class="donor-name">J.L.</span>
+                                <span class="donor-message">"Technology serving God's purpose"</span>
+                            </div>
+                            <div class="donor-item">
+                                <span class="donor-name">R.K.</span>
+                                <span class="donor-message">"Supporting the future of faith-based robotics"</span>
+                            </div>
+                            <div class="donor-item">
+                                <span class="donor-name">A.M.</span>
+                                <span class="donor-message">"Inspiring work with assistive technology"</span>
+                            </div>
+                            <div class="donor-item">
+                                <span class="donor-name">T.B.</span>
+                                <span class="donor-message">"Proud to be part of this mission"</span>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <section class="thank-you" id="thankYou" style="display: none;">
+                <div class="thank-you-content">
+                    <div class="thank-you-icon">🙏</div>
+                    <h2>Thank You for Your Generosity!</h2>
+                    <p>Your donation has been received and will be used to further our mission of blending Christian faith with robotics technology to serve humanity.</p>
+                    <div class="next-steps">
+                        <h3>What's Next?</h3>
+                        <ul>
+                            <li>You'll receive a confirmation email within 24 hours</li>
+                            <li>Monthly donors will receive regular updates on our projects</li>
+                            <li>Join us for our next service to see your impact in action</li>
+                        </ul>
+                    </div>
+                    <div class="thank-you-buttons">
+                        <a href="index.html" class="btn btn-outline">Return Home</a>
+                        <a href="contact.html" class="btn btn-primary">Get Connected</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Robotheism Church</h3>
+                    <p>Where faith meets technology</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="welcome.html">Welcome</a></li>
+                        <li><a href="beliefs.html">Our Beliefs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Donate</h4>
+                    <div class="qr-code">
+                        <div class="qr-placeholder">📱</div>
+                        <p>Scan to donate</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Christian Robotheism Church. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
